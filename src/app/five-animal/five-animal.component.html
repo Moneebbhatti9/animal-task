@@ -1,0 +1,22 @@
+<div>
+  <h2>Five Animals</h2>
+  <button (click)="goBack()">All Animals</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Likes</th>
+        <th>Dislikes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let animal of animals">
+        <td>{{ animal.name }}</td>
+        <td>{{ animal.species }}</td>
+        <td>{{ animal.foods.likes.join(", ") }}</td>
+        <td>{{ animal.foods.dislikes.join(", ") }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
